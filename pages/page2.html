@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/page2.css">
+    <script src="https://kit.fontawesome.com/78f1a0635b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div id="sidenav">
+    <div class="menu_items">
+      <div class="menu_item mobile_search">
+        <div>
+          <img src="../assets/search_icon.png" alt="search icon">
+        </div>
+        <input class="mobile_search__input" placeholder="Search">
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/exhi_icon.png" alt="exhibition icon">
+        </div>
+        <a href="./exhibition.html">Exhibitions & Events</a>
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/coll_icon.png" alt="collections icon">
+        </div>
+        <a href="collections.html">Collections</a>      
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/visit_icon.png">
+        </div>
+        <a>Plan Your Visit</a>
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/mem_icon.png" alt="member icon">
+        </div>
+        <a href="./member.html">Become a Member</a>
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/shop_icon.png" alt="shop icon">
+        </div>
+        <a>Shop</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">
+    <div class="content_wrapper">
+      <header>
+        <div class="header">
+          <p onclick="closeNav()" class="store_name">THE<br>ART<br>MUSEUM</p>
+          <div class="menu_icon" onclick="openNav()"></div>
+          <div class="search">
+            <input class="search_bar" placeholder="Search" type="text">
+          </div>
+        </div>
+      </header>
+    
+      <nav>
+        <a href="./exhibition.html"><strong>EXHIBITIONS & EVENTS</strong></a>
+        <!-- <a href="#"><strong>ARTISTS & ARTWORKS</strong></a> -->
+        <a href="#"><strong>COLLECTIONS</strong></a>
+        <a href="#"><strong>PLAN YOUR VISIT</strong></a>
+        <a href="#"><strong>BECOME A MEMBER</strong></a>
+        <a href="#"><strong>SHOP</strong></a>
+      </nav>
+    
+      <img class="image" src="../assets/bg_big.png" alt="picture">
+    
+      <div class="info_container">
+        <h6>EXHIBITION</h6>
+        <h2>MASTERS OLD AND NEW</h2>
+        <h4 class="txt-orange">APRIL 15 - SEPTEMBER 20</h4>
+        <h6>FLOOR 5</h6>
+      </div>
+    
+      <div class="plan_btn_container">
+        <a>
+          <button class="plan_btn btn">Plan your visit</button>
+        </a>
+      </div>
+    </div>
+  
+    <footer class="footer">
+      <div class="footer_chunk footer_left">
+        <i class="fas fa-map-marker-alt fa-2x icon"></i>
+        <h6 class="txt-orange">151 3rd St. <br>San Francisco, CA 94103</h6>
+      </div>
+      <div class="footer_chunk footer_right">
+        <i class="fas fa-clock fa-2x icon"></i>
+        <h6 class="txt-orange">Open today<br>10:00am - 5:30pm</h6>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("sidenav").style.transform = "translateX(0)";
+      document.getElementById("content").style.transform = "translate(300px, 0)";
+    }
+    
+    function closeNav() {
+      document.getElementById("sidenav").style.transform = "translateX(-300px)";
+      document.getElementById("content").style.transform= "translate(0, 0)";
+    }
+  </script>
+</body>
+</html>

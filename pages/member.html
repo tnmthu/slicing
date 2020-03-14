@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/member.css">
+    <script src="https://kit.fontawesome.com/78f1a0635b.js" crossorigin="anonymous"></script>
+  </head>
+<body>
+
+  <div id="sidenav">
+    <div class="menu_items">
+      <div class="menu_item mobile_search">
+        <div>
+          <img src="../assets/search_icon.png" alt="search icon">
+        </div>
+        <input class="mobile_search__input" placeholder="Search">
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/exhi_icon.png" alt="exhibition icon">
+        </div>
+        <a href="./exhibition.html">Exhibitions & Events</a>
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/coll_icon.png" alt="collections icon">
+        </div>
+        <a href="collections.html">Collections</a>      
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/visit_icon.png">
+        </div>
+        <a>Plan Your Visit</a>
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/mem_icon.png" alt="member icon">
+        </div>
+        <a href="./member.html">Become a Member</a>
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/shop_icon.png" alt="shop icon">
+        </div>
+        <a>Shop</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">
+    <header>
+      <div class="header">
+        <h6 onclick="closeNav()" class="store_name">THE<br>ART<br>MUSEUM</h6>
+        <div onclick="openNav()" class="menu_icon"></div>
+        <div class="search">
+          <input class="search_bar" placeholder="Search" type="text">
+        </div>
+        <p class="header_txt txt-orange">Become a Member</p>
+      </div>
+    </header>
+  
+    <nav>
+      <a href="./exhibition.html"><strong>EXHIBITIONS & EVENTS</strong></a>
+      <!-- <a href="#"><strong>ARTISTS & ARTWORKS</strong></a> -->
+      <a href="#"><strong>COLLECTIONS</strong></a>
+      <a href="#"><strong>PLAN YOUR VISIT</strong></a>
+      <a href="#"><strong>BECOME A MEMBER</strong></a>
+      <a href="#"><strong>SHOP</strong></a>
+    </nav>
+  
+    <div class="bg_img">
+      <img src="../assets/member.png" alt="chuoi">
+      <h4>Your museum. <br>Your bounty of Experience.</h4>
+    </div>
+  
+    <div class="txt txt-gray">
+      <p>Choose the membership that's the best fit for you.<br>Click on the level to view the full description of benefits.</p>
+    </div>
+  
+    <div class="levels">
+      <div class="level">
+        <div class="level--left">
+          <p>Individual - $75</p>
+          <span class="txt-gray">$60 tax deductible</span>
+        </div>
+        <i class="fas fa-chevron-right txt-gray"></i>
+      </div>
+      <div class="level">
+        <div class="level--left">
+          <p>Dual - $125</p>
+          <span class="txt-gray">$60 tax deductible</span>
+        </div>
+        <i class="fas fa-chevron-right txt-gray"></i>
+      </div>
+      <div class="level" style="margin-bottom: 0;">
+        <div class="level--left">
+          <p>Supporter - $300</p>
+          <span class="txt-gray">$60 tax deductible</span>
+        </div>
+        <i class="fas fa-chevron-right txt-gray"></i>
+      </div>
+    </div>
+  
+    <div class="btn_container">
+      <button class="btn">Join Today</button>
+    </div>  
+  </div>
+
+  
+  <script>
+    function openNav() {
+      document.getElementById("sidenav").style.transform = "translateX(0)";
+      document.getElementById("content").style.transform = "translate(300px, 0)";
+    }
+    
+    function closeNav() {
+      document.getElementById("sidenav").style.transform = "translateX(-300px)";
+      document.getElementById("content").style.transform= "translate(0, 0)";
+    }
+  </script>
+</body>
+</html>
