@@ -65,18 +65,15 @@ body {
 }
 
 .header {
-  width: 100%;
+  width: 95%;
   height: 60px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 }
-.store_name {
-  margin-left: 10px;
-}
 .menu_icon {
-  margin-right: 10px;
   width: 18px;
   height: 2px;
   background-color: #000;
@@ -101,6 +98,12 @@ body {
 .search {
   display: none;
 }
+nav {
+  display: none;
+}
+nav a:hover {
+  color: #FF473A;
+}
 .header_txt {
   position: absolute;
   line-height: 60px;
@@ -118,12 +121,100 @@ body {
   /* margin: 15px auto; */
   margin: 3vh auto;
 }
-h2 {
+.info_container h2 {
   width: 145px;
+}
+
+.carousel {
+  width: 100%;
+  height: 250px;
+  background-color: #979797;
+}
+
+.carousel_txt {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.bio {
+  width: 85%;
+  margin: 20px auto;
+}
+.bio_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.arrow_container {
+  width: 30px;
+  height: 20px;
+  text-align: center;
+}
+#bio_txt {
+  text-align: justify;
+  margin-top: 8px;
+  font-size: 12px;
 }
 
 @media screen and (min-width: 480px) {
   #sidenav {
     display: none;
+  }
+  .header, nav {
+    width: 90%;
+    margin: auto;
+  }
+  .menu_icon {
+    display: none;
+  }
+  .store_name {
+    margin-left: 0;
+    font-size: 13px;
+  }
+  .search {
+    display: block;
+    width: 220px;
+    height: 30px;
+  }
+  .search_bar {
+    width: 200px;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    padding-left: 14px;
+  }
+  nav {
+    height: 35px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  a {
+    color: #000;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #FF473A;
+  }
+  .info_container {
+    height: auto;
+    text-align: center;
+  }
+  .info_container h2 {
+    width: 100%;
+  }
+
+  .carousel_txt {
+    font-size: 15px;
+  }
+
+  .bio {
+    width: 50%;
+  }
+  #bio_txt {
+    font-size: 13px;
   }
 }
