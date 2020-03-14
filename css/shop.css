@@ -1,0 +1,164 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#sidenav {
+  width: 300px;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: #FF473A;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  transform: translateX(-300px);
+}
+#content  {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  transition: 0.5s;
+  transform: translate(0px, 0px);
+}
+.mobile_search {
+  display: flex;
+  margin: 0 0 30px 0;
+}
+.mobile_search input {
+  height: 40px;
+  flex-grow: 1;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding-left: 20px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.mobile_search input::placeholder {
+  color: #fff;
+}
+.menu_items {
+  margin: 20px;
+}
+.menu_item {
+  width: 100%;
+  display: flex;
+  margin: 20px 0;
+}
+.menu_item > div{
+  width: 50px;
+  height: 30px;
+}
+.menu_item img {
+  width: fit-content;
+  height: fit-content;
+}
+.menu_item a {
+  color: #fff;
+  font-size: 16px;
+}
+.menu_item a:active {
+  text-decoration: underline;
+}
+
+.header {
+  width: 95%;
+  height: 60px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.menu_icon {
+  width: 18px;
+  height: 2px;
+  background-color: #000;
+  position: relative;
+}
+.menu_icon::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background-color: #000;
+  top: -5px;
+}
+.menu_icon::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background-color: #000;
+  bottom: -5px;
+}
+.search {
+  display: none;
+}
+nav {
+  display: none;
+}
+nav a:hover {
+  color: #FF473A;
+}
+.header_txt {
+  position: absolute;
+  line-height: 60px;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+}
+
+.wrapper {
+  width: 95%;
+  margin: auto;
+}
+
+.carousel_container {
+  margin: 10px 0 30px 0;
+}
+.carousel_container img {
+  width: 100%;
+}
+
+.product_name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.product_description_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.product_description_container img {
+  width: 10px;
+  height: 20px;
+  margin-right: 8px;
+}
+#product_description {
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.prices {
+  height: 43px;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.prices--left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.left--reg {
+  font-weight: bold;
+}
+.prices--right {
+  width: 90px;
+}

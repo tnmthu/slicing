@@ -6,11 +6,9 @@
     <title>Training</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/member.css">
-    <script src="https://kit.fontawesome.com/78f1a0635b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/shop.css">
   </head>
 <body>
-
   <div id="sidenav">
     <div class="menu_items">
       <div class="menu_item mobile_search">
@@ -55,12 +53,12 @@
   <div id="content">
     <header>
       <div class="header">
-        <h6 onclick="closeNav()" class="store_name">THE<br>ART<br>MUSEUM</h6>
+        <p onclick="closeNav()" class="store_name">THE<br>ART<br>MUSEUM</p>
         <div onclick="openNav()" class="menu_icon"></div>
         <div class="search">
           <input class="search_bar" placeholder="Search" type="text">
         </div>
-        <p class="header_txt txt-orange">Become a Member</p>
+        <p class="header_txt txt-orange">Shop</p>
       </div>
     </header>
   
@@ -72,46 +70,41 @@
       <a href="./member.html"><strong>BECOME A MEMBER</strong></a>
       <a href="./shop.html"><strong>SHOP</strong></a>
     </nav>
-  
-    <div class="bg_img">
-      <img src="../assets/member.png" alt="chuoi">
-      <h4>Your museum. <br>Your bounty of Experience.</h4>
-    </div>
-  
-    <div class="txt txt-gray">
-      <p>Choose the membership that's the best fit for you.<br>Click on the level to view the full description of benefits.</p>
-    </div>
-  
-    <div class="levels">
-      <div class="level">
-        <div class="level--left">
-          <p>Individual - $75</p>
-          <span class="txt-gray">$60 tax deductible</span>
-        </div>
-        <i class="fas fa-chevron-right txt-gray"></i>
+
+    <div class="wrapper">
+
+      <div class="carousel_container">
+        <img src="../assets/watch.png" alt="watch">
       </div>
-      <div class="level">
-        <div class="level--left">
-          <p>Dual - $125</p>
-          <span class="txt-gray">$60 tax deductible</span>
-        </div>
-        <i class="fas fa-chevron-right txt-gray"></i>
-      </div>
-      <div class="level" style="margin-bottom: 0;">
-        <div class="level--left">
-          <p>Supporter - $300</p>
-          <span class="txt-gray">$60 tax deductible</span>
-        </div>
-        <i class="fas fa-chevron-right txt-gray"></i>
-      </div>
-    </div>
   
-    <div class="btn_container">
-      <button class="btn">Join Today</button>
-    </div>  
+      <p class="product_name">Braun Classic Watch</p>
+  
+      <div class="product_description_container">
+        <p id="product_description" class="txt-gray" style="height: 98px;">
+          This Braun watch is a reissue of the original 1970's design from renowned design team Dietrich Lubs and Dieter Rams, both of whom have work featured in the Museum’s collection. The large watch features a numbered face, and the smaller watch has only index lines. Made of a matte stainless-steel case, black dial, mineral glass, a three-hand quartz movement, and a leather band. Water-resistant.
+        </p>
+        <img id="arrow" onclick="toggleFullDescription()" src="../assets/arrow_down.png" alt="arrow down">
+      </div>
+      
+  
+      <div class="prices">
+        <div class="prices--left">
+          <p class="left--reg">
+            $160.00
+          </p>
+          <p class="left--member txt-gray">
+            $140.00 Member Price
+          </p>
+        </div>
+        <div class="prices--right">
+
+        </div>
+      </div>
+
+    </div>
+
   </div>
 
-  
   <script>
     function openNav() {
       document.getElementById("sidenav").style.transform = "translateX(0)";
@@ -120,8 +113,21 @@
     
     function closeNav() {
       document.getElementById("sidenav").style.transform = "translateX(-300px)";
-      document.getElementById("content").style.transform= "translate(0, 0)";
+      document.getElementById("content").style.transform = "translate(0, 0)";
+    }
+
+    function toggleFullDescription() {
+      let des = document.getElementById("product_description");
+      let arrow = document.getElementById("arrow");
+      if (des.style.height == "98px") {
+        des.style.height = "fit-content";
+        arrow.src = "../assets/arrow_up.png";
+      } else {
+        des.style.height = "98px";
+        arrow.src = "../assets/arrow_down.png";
+      }
     }
   </script>
+
 </body>
 </html>
