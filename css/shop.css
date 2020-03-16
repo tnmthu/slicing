@@ -118,16 +118,23 @@ nav a:hover {
 }
 
 .carousel_container {
-  margin: 10px 0 30px 0;
+  margin: 5px 0 20px 0;
 }
 .carousel_container img {
   width: 100%;
+  height: auto;
+}
+.slick-dots li.slick-active button:before {
+  color: #FF473A !important;
+}
+.slick-next, .slick-prev, .slick-arrow {
+  display: none !important;
 }
 
 .product_name {
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .product_description_container {
   display: flex;
@@ -143,6 +150,7 @@ nav a:hover {
   width: 90%;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 13px;
 }
 
 .prices {
@@ -160,5 +168,19 @@ nav a:hover {
   font-weight: bold;
 }
 .prices--right {
-  width: 90px;
+  width: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #979797;
+}
+.prices--right button {
+  border: 1px solid #979797;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+.cart_btn_container {
+  width: 80%;
+  margin: 15px auto 5px;
 }
