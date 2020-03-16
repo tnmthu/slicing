@@ -4,10 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Training</title>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  
   <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/exhibition.css">
-  <script src="https://kit.fontawesome.com/78f1a0635b.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -81,7 +89,12 @@
       <h6 class="txt-gray">FLOOR 3</h6>
     </div>
   
-    <div class="carousel"></div>
+    <div class="carousel_container">
+      <img src="../assets/exhi.png" alt="exhibition picture">
+      <img src="../assets/exhi.png" alt="exhibition picture">
+      <img src="../assets/exhi.png" alt="exhibition picture">
+      <img src="../assets/exhi.png" alt="exhibition picture">
+    </div>
     
     <div class="carousel_txt txt-gray">
       "Abandoned Dust Bowl Home" <br> Gelatin silver <br> print about 1935 - 1940
@@ -100,6 +113,27 @@
     </div>
 
   </div>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.carousel_container').slick({
+        centerPadding: '60px',
+        slidesToShow: 1,
+        dots: true,
+        responsive: [
+          {
+            breakpoint: 480,
+            settings: {
+              centerMode: true,
+              centerPadding: '60px',
+              slidesToShow: 1,
+              dots: true,
+            }
+          }
+        ]
+      });
+    });
+  </script>
   
   <script>
     function openNav() {
@@ -124,5 +158,8 @@
       }
     }
   </script>
+
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </body>
 </html>
