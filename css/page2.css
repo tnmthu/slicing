@@ -160,7 +160,6 @@ h6 {
 
 @media screen and (min-width: 480px) {
   body {
-    padding: 0 0 60px;
     position: relative;
   }
   #sidenav {

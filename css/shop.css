@@ -255,6 +255,7 @@ nav a:hover {
     font-size: 30px;
   }
   .product_description_container {
+    width: 80%;
     height: fit-content;
   }
   .product_description_container img {
