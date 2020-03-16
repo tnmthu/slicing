@@ -208,7 +208,8 @@ nav a:hover {
 
   .search_container {
     width: 350px;
-    margin: 15px 5%;
+    margin: 15px auto;
+    text-align: center;
   }
 
   .coll_container {

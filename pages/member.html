@@ -35,7 +35,7 @@
         <div>
           <img src="../assets/visit_icon.png">
         </div>
-        <a>Plan Your Visit</a>
+        <a href="./visit.html">Plan Your Visit</a>
       </div>
       <div class="menu_item">
         <div>
@@ -55,8 +55,10 @@
   <div id="content">
     <header>
       <div class="header">
-        <h6 onclick="closeNav()" class="store_name">THE<br>ART<br>MUSEUM</h6>
-        <div onclick="openNav()" class="menu_icon"></div>
+        <div onclick="toggleNav()" class="menu_icon"></div>
+        <a href="page2.html">
+          <h6 class="store_name">THE<br>ART<br>MUSEUM</h6>
+        </a>
         <div class="search">
           <input class="search_bar" placeholder="Search" type="text">
         </div>
@@ -113,14 +115,18 @@
 
   
   <script>
-    function openNav() {
-      document.getElementById("sidenav").style.transform = "translateX(0)";
-      document.getElementById("content").style.transform = "translate(300px, 0)";
-    }
-    
-    function closeNav() {
-      document.getElementById("sidenav").style.transform = "translateX(-300px)";
-      document.getElementById("content").style.transform= "translate(0, 0)";
+    var isClosed = true;
+
+    function toggleNav() {
+      if (isClosed == true) {
+        document.getElementById("sidenav").style.transform = "translateX(0)";
+        document.getElementById("content").style.transform = "translate(300px, 0)";
+        isClosed = false;
+      } else {
+        document.getElementById("sidenav").style.transform = "translateX(-300px)";
+        document.getElementById("content").style.transform = "translate(0, 0)";
+        isClosed = true;
+      }
     }
   </script>
 </body>
