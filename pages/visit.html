@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/visit.css">
+  </head>
+<body>
+  <div id="sidenav">
+    <div class="menu_items">
+      <div class="menu_item mobile_search">
+        <div>
+          <img src="../assets/search_icon.png" alt="search icon">
+        </div>
+        <input class="mobile_search__input" placeholder="Search">
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/exhi_icon.png" alt="exhibition icon">
+        </div>
+        <a href="./exhibition.html">Exhibitions & Events</a>
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/coll_icon.png" alt="collections icon">
+        </div>
+        <a href="collections.html">Collections</a>      
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/visit_icon.png">
+        </div>
+        <a>Plan Your Visit</a>
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/mem_icon.png" alt="member icon">
+        </div>
+        <a href="./member.html">Become a Member</a>
+      </div>
+      <div class="menu_item">
+        <div>
+          <img src="../assets/shop_icon.png" alt="shop icon">
+        </div>
+        <a href="./shop.html">Shop</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="content">
+    <header>
+      <div class="header">
+        <p onclick="closeNav()" class="store_name">THE<br>ART<br>MUSEUM</p>
+        <div onclick="openNav()" class="menu_icon"></div>
+        <div class="search">
+          <input class="search_bar" placeholder="Search" type="text">
+        </div>
+        <p class="header_txt txt-orange">Plan Your Visit</p>
+      </div>
+    </header>
+  
+    <nav>
+      <a href="./exhibition.html"><strong>EXHIBITIONS & EVENTS</strong></a>
+      <!-- <a href="#"><strong>ARTISTS & ARTWORKS</strong></a> -->
+      <a href="./collections.html"><strong>COLLECTIONS</strong></a>
+      <a href="./visit.html"><strong>PLAN YOUR VISIT</strong></a>
+      <a href="./member.html"><strong>BECOME A MEMBER</strong></a>
+      <a href="./shop.html"><strong>SHOP</strong></a>
+    </nav>
+
+    <div class="wrapper">
+      
+      <div class="info_container">
+        <p>Skip the Line.<br>Purchase Tickets.</p>
+        <p class="txt-orange">All exhibitions, audio tours, and films included in the price of admission.</p>
+      </div>
+
+      <div class="date_container">
+
+      </div>
+
+      <div class="amount_container">
+        <div class="amount_type">
+          <p>Adults</p>
+          <div class="amount--right">
+            <button id="minus_btn1" class="txt-gray" onclick="minusItem(1)">-</button>
+            <p id="amount1">0</p>
+            <button id="add_btn1" class="txt-gray" onclick="addItem(1)">+</button>
+          </div>
+        </div>
+        <div class="amount_type">
+          <div class="amount_type--txt">
+            <p>Seniors</p>
+            <p>65+ with ID</p>
+          </div>
+          <div class="amount--right">
+            <button id="minus_btn2" class="txt-gray" onclick="minusItem(2)">-</button>
+            <p id="amount2">0</p>
+            <button id="add_btn2" class="txt-gray" onclick="addItem(2)">+</button>
+          </div>
+        </div>
+        <div class="amount_type">
+          <div class="amount_type--txt">
+            <p>Students</p>
+            <p>With ID</p>
+          </div>
+          <div class="amount--right">
+            <button id="minus_btn3" class="txt-gray" onclick="minusItem(3)">-</button>
+            <p id="amount3">0</p>
+            <button id="add_btn3" class="txt-gray" onclick="addItem(3)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="total_container">
+        <p>Total</p>
+        <p>$16</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+
+    function openNav() {
+      document.getElementById("sidenav").style.transform = "translateX(0)";
+      document.getElementById("content").style.transform = "translate(300px, 0)";
+    }
+    
+    function closeNav() {
+      document.getElementById("sidenav").style.transform = "translateX(-300px)";
+      document.getElementById("content").style.transform = "translate(0, 0)";
+    }
+
+    function minusItem(num) {
+      let btn = document.getElementById(`minus_btn${num}`);
+      let amount = document.getElementById(`amount${num}`);
+      if (parseInt(amount.innerHTML) === 0) {
+        btn.disabled = true;
+      } else {
+        amount.innerHTML = parseInt(amount.innerHTML) - 1;
+      }
+    }
+
+    function addItem(num) {
+      let amount = document.getElementById(`amount${num}`);
+      amount.innerHTML = parseInt(amount.innerHTML) + 1;
+      document.getElementById(`minus_btn${num}`).disabled = false;
+    }
+  </script>
+
+</body>
+</html>

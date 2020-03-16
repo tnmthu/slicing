@@ -29,6 +29,9 @@ h5 {
 h6 {
   font-size: 12px;
 }
+button {
+  background-color: transparent;
+}
 .txt-white {
   color: #fff;
 }
