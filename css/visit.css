@@ -123,6 +123,7 @@ nav a:hover {
 }
 .info_container > p:first-child {
   font-size: 24px;
+  margin-bottom: 8px;
 }
 
 .date_container {
@@ -234,5 +235,17 @@ nav a:hover {
   a:hover {
     text-decoration: underline;
     color: #FF473A;
+  }
+
+  .info_container {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .info_container p:first-child {
+    font-size: 34px;
+  }
+  .date_container, .amount_container, .total_container, .btn_container {
+    width: 45%;
+    margin: 0 auto 30px;
   }
 }
