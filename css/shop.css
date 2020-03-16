@@ -242,12 +242,13 @@ nav a:hover {
   }
 
   .wrapper {
-    width: 80%;
+    /* width: 100%; */
     display: flex;
-    margin-top: 50px;
+    margin: 5vh 0 0 7vh;
   }
   .wrapper--right {
-    margin-left: 75px;
+    margin-left: 55px;
+    height: auto;
   }
   .product_name {
     font-size: 34px;
@@ -259,19 +260,19 @@ nav a:hover {
     display: none;
   }
   #product_description {
-    height: 180px !important;
+    /* width: 65%; */
+    height: fit-content !important;
     overflow: unset;
     text-overflow: unset;
     font-size: 16px;
-    line-height: 1.6;
     text-align: justify;
   }
   .prices {
-    width: 85%;
+    width: 65%;
     margin: 35px 0;
   }
   .cart_btn_container {
-    width: 85%;
+    width: 65%;
     margin: 15px 0;
   }
 }
