@@ -10,12 +10,12 @@
       crossorigin="anonymous"></script>
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/shop.css">
-
+    
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
-
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/shop.css">
   </head>
 <body>
   <div id="sidenav">
@@ -81,47 +81,50 @@
     </nav>
 
     <div class="wrapper">
-      
+
       <div class="carousel_container">
         <img src="../assets/watch.png" alt="watch">
         <img src="../assets/watch.png" alt="watch">
         <img src="../assets/watch.png" alt="watch">
       </div>
   
-      <p class="product_name">Braun Classic Watch</p>
+      <div class="wrapper--right">
+        <div class="info_wrapper">
+          <p class="product_name">Braun Classic Watch</p>
+
+          <div class="product_description_container">
+            <p id="product_description" class="txt-gray" style="height: 98px;">
+              This Braun watch is a reissue of the original 1970's design from renowned design team Dietrich Lubs and Dieter Rams, both of whom have work featured in the Museum’s collection. The large watch features a numbered face, and the smaller watch has only index lines. Made of a matte stainless-steel case, black dial, mineral glass, a three-hand quartz movement, and a leather band. Water-resistant.
+            </p>
+            <img id="arrow" onclick="toggleFullDescription()" src="../assets/arrow_down.png" alt="arrow down">
+          </div>
+      
+          <div class="prices">
+            <div class="prices--left">
+              <p class="left--reg">
+                $160.00
+              </p>
+              <p class="left--member txt-gray">
+                $140.00 Member Price
+              </p>
+            </div>
+            <div class="prices--right">
+              <button id="minus_btn" class="txt-gray" onclick="minusItem()">-</button>
+              <p id="amount">0</p>
+              <button id="add_btn" class="txt-gray" onclick="addItem()">+</button>
+            </div>
+          </div>
+        </div>
   
-      <div class="product_description_container">
-        <p id="product_description" class="txt-gray" style="height: 98px;">
-          This Braun watch is a reissue of the original 1970's design from renowned design team Dietrich Lubs and Dieter Rams, both of whom have work featured in the Museum’s collection. The large watch features a numbered face, and the smaller watch has only index lines. Made of a matte stainless-steel case, black dial, mineral glass, a three-hand quartz movement, and a leather band. Water-resistant.
-        </p>
-        <img id="arrow" onclick="toggleFullDescription()" src="../assets/arrow_down.png" alt="arrow down">
+        <div class="cart_btn_container">
+          <a>
+            <button id="add_btn" class="btn">
+              Add to Cart
+            </button>
+          </a>
+        </div>
       </div>
       
-  
-      <div class="prices">
-        <div class="prices--left">
-          <p class="left--reg">
-            $160.00
-          </p>
-          <p class="left--member txt-gray">
-            $140.00 Member Price
-          </p>
-        </div>
-        <div class="prices--right">
-          <button id="minus_btn" class="txt-gray" onclick="minusItem()">-</button>
-          <p id="amount">0</p>
-          <button id="add_btn" class="txt-gray" onclick="addItem()">+</button>
-        </div>
-      </div>
-
-      <div class="cart_btn_container">
-        <a>
-          <button id="add_btn" class="btn">
-            Add to Cart
-          </button>
-        </a>
-      </div>
-
     </div>
 
   </div>
@@ -129,30 +132,20 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('.carousel_container').slick({
-        centerMode: true,
-        centerPadding: '0px',
+        centerPadding: '60px',
         slidesToShow: 1,
         dots: true,
-        // responsive: [
-        //   {
-        //     breakpoint: 768,
-        //     settings: {
-        //       // arrows: false,
-        //       centerMode: true,
-        //       // centerPadding: '40px',
-        //       slidesToShow: 1
-        //     }
-        //   },
-        //   {
-        //     breakpoint: 480,
-        //     settings: {
-        //       // arrows: false,
-        //       centerMode: true,
-        //       // centerPadding: '40px',
-        //       slidesToShow: 1
-        //     }
-        //   }
-        // ]
+        responsive: [
+          {
+            breakpoint: 480,
+            settings: {
+              centerMode: true,
+              centerPadding: '0px',
+              slidesToShow: 1,
+              dots: true,
+            }
+          }
+        ]
       });
     });
   </script>

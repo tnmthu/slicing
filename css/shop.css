@@ -184,3 +184,94 @@ nav a:hover {
   width: 80%;
   margin: 15px auto 5px;
 }
+
+
+@media screen and (min-width: 480px) {
+  #sidenav {
+    display: none;
+  }
+  .header, nav {
+    width: 90%;
+    margin: auto;
+  }
+  .menu_icon {
+    display: none;
+  }
+  .store_name {
+    font-size: 13px;
+    margin-left: 0;
+  }
+  .search {
+    display: block;
+    width: 220px;
+    height: 30px;
+  }
+  .search_bar {
+    width: 200px;
+    height: 100%;
+    border-radius: 20px;
+    border: 2px solid #ddd;
+    padding-left: 14px;
+  }
+  nav {
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  a {
+    color: #000;
+  }
+  a:hover {
+    text-decoration: underline;
+    color: #FF473A;
+  }
+
+  .carousel_container {
+    width: 40vw;
+    margin: auto;
+  }
+  .slick-next::before, .slick-prev::before, .slick-arrow {
+    display: block !important;
+    color: #FF473A !important;
+  }
+  .slick-prev:before, .slick-next:before {
+    font-size: 30px;
+  }
+
+  .wrapper {
+    width: 80%;
+    display: flex;
+    margin-top: 50px;
+  }
+  .wrapper--right {
+    margin-left: 75px;
+  }
+  .product_name {
+    font-size: 34px;
+  }
+  .product_description_container {
+    height: fit-content;
+  }
+  .product_description_container img {
+    display: none;
+  }
+  #product_description {
+    height: 180px !important;
+    overflow: unset;
+    text-overflow: unset;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+  }
+  .prices {
+    width: 85%;
+    margin: 35px 0;
+  }
+  .cart_btn_container {
+    width: 85%;
+    margin: 15px 0;
+  }
+}
