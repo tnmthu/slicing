@@ -110,7 +110,7 @@ body {
   background-color: #000;
   bottom: -5px;
 }
-.search {
+.search_container {
   display: none;
 }
 nav {
