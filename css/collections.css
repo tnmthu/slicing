@@ -118,7 +118,7 @@ nav a:hover {
   color: #FF473A;
 }
 
-.search_container {
+.ad_search_container {
   width: 95%;
   height: 75px;
   margin: 15px auto;
@@ -126,7 +126,7 @@ nav a:hover {
   flex-direction: column;
   justify-content: space-between;
 }
-.search_container a {
+.ad_search_container a {
   font-size: 14px;
   color: #FF473A;
   text-decoration: underline;
@@ -228,7 +228,7 @@ nav a:hover {
     color: #FF473A;
   }
 
-  .search_container {
+  .ad_search_container {
     width: 350px;
     margin: 15px auto;
     text-align: center;
