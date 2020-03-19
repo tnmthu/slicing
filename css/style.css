@@ -11,13 +11,10 @@ body {
 a {
   text-decoration: none;
 }
-a:visited {
-  color: #000;
-}
 h1 {
   font-size: 36px;
 }
-h2{
+h2 {
   font-size: 24px;
 }
 h3 {
@@ -34,6 +31,10 @@ h6 {
 }
 button {
   background-color: transparent;
+}
+
+.txt-black {
+  color: #000;
 }
 .txt-white {
   color: #fff;

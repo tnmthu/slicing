@@ -27,6 +27,9 @@ body {
   display: flex;
   margin: 0 0 30px 0;
 }
+.mobile_search div {
+  height: 30px;
+}
 .mobile_search input {
   height: 40px;
   flex-grow: 1;
@@ -44,12 +47,13 @@ body {
 }
 .menu_item {
   width: 100%;
+  height: 30px;
   display: flex;
+  align-items: center;
   margin: 20px 0;
 }
 .menu_item > div{
   width: 50px;
-  height: 30px;
 }
 .menu_item img {
   width: fit-content;
@@ -70,6 +74,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.header_txt {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+}
+.store_name {
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-left: 0;
 }
 .menu_icon {
   width: 18px;
@@ -93,7 +108,10 @@ body {
   background-color: #000;
   bottom: -5px;
 }
-.search {
+#search {
+  display: none;
+}
+#search_icon {
   display: none;
 }
 nav {
@@ -103,6 +121,7 @@ nav a:hover {
   color: #FF473A;
 }
 .image {
+  margin-top: 10px;
   width: 100%;
 }
 
@@ -112,18 +131,22 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 5vh auto;
+  margin: 3vh auto;
 }
-h2 {
+.top_bot {
+  font-size: 12px;
+}
+.mid_big {
+  font-size: 24px;
   width: 125px;
 }
-h6 {
-  color: #aaa;
+.mid_small {
+  font-size: 18px;
 }
 
 .plan_btn_container {
   text-align: center;
-  margin-top: 6vh;
+  margin-top: 5vh;
 }
 
 .plan_btn {
@@ -172,21 +195,33 @@ h6 {
   .menu_icon {
     display: none;
   }
-  .store_name {
-    margin-left: 0;
-    font-size: 13px;
+  .content_wrapper {
+    position: relative;
   }
-  .search {
-    display: block;
-    width: 220px;
-    height: 30px;
+  .search_container {
+    height: 35px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 5vw;
+    top: 62px;
+  }
+  #search {
+    display: none;
+    flex-grow: 1;
+    margin: 0 20px;
+    width: 85vw;
+    height: 35px;
+    z-index: 9;
   }
   .search_bar {
-    width: 200px;
+    width: 100%;
     height: 100%;
-    border-radius: 20px;
-    border: 2px solid #ddd;
+    border: 1px solid #979797;
     padding-left: 14px;
+  }
+  #search_icon {
+    display: block;
   }
   nav {
     height: 35px;
@@ -213,7 +248,7 @@ h6 {
     align-items: center;
     height: 150px;
   }
-  h2 {
+  .mid_big {
     width: fit-content;
   }
   .plan_btn_container {

@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/collections.css">
+    <script src="https://kit.fontawesome.com/78f1a0635b.js" crossorigin="anonymous"></script>
+
   </head>
 <body>
 
@@ -73,11 +75,17 @@
       <a href="./member.html"><strong>BECOME A MEMBER</strong></a>
       <a href="./shop.html"><strong>SHOP</strong></a>
     </nav>
+    <div class="search_container">
+      <div id="search">
+        <input class="search_bar" placeholder="Search" type="text">
+      </div>
+      <i class="fas fa-search fa-lg" id="search_icon" onclick="toggleSearchInput()"></i>
+    </div>
   
     <div class="search_container">
       <div class="input_container txt-orange">
-        <input type="text" placeholder="Explore the Collection">
-        <img src="../assets/search_icon.png" alt="search icon">
+        <input type="text" placeholder="Explore the Collection" class="input_container txt-orange">
+        <img src="../assets/search_icon_orange.png" alt="search icon">
       </div>
       <a href="#">Advanced Search</a>
     </div>
@@ -130,6 +138,15 @@
         document.getElementById("sidenav").style.transform = "translateX(-300px)";
         document.getElementById("content").style.transform = "translate(0, 0)";
         isClosed = true;
+      }
+    }
+
+    function toggleSearchInput() {
+      let search = document.getElementById("search");
+      if (search.style.display == "none") {
+        search.style.display = "block";
+      } else {
+        search.style.display = "none";
       }
     }
   </script>

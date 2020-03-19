@@ -28,6 +28,9 @@ body {
   display: flex;
   margin: 0 0 30px 0;
 }
+.mobile_search div {
+  height: 30px;
+}
 .mobile_search input {
   height: 40px;
   flex-grow: 1;
@@ -45,12 +48,13 @@ body {
 }
 .menu_item {
   width: 100%;
+  height: 30px;
   display: flex;
+  align-items: center;
   margin: 20px 0;
 }
 .menu_item > div{
   width: 50px;
-  height: 30px;
 }
 .menu_item img {
   width: fit-content;
@@ -72,6 +76,17 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
+}
+.header_txt {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: -1;
+}
+.store_name {
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-left: 0;
 }
 .menu_icon {
   width: 18px;
@@ -184,21 +199,33 @@ nav a:hover {
   .menu_icon {
     display: none;
   }
-  .store_name {
-    margin-left: 0;
-    font-size: 13px;
+  #content {
+    position: relative;
   }
-  .search {
-    display: block;
-    width: 220px;
-    height: 30px;
+  .search_container {
+    height: 35px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 5vw;
+    top: 62px;
+  }
+  #search {
+    display: none;
+    flex-grow: 1;
+    margin: 0 20px;
+    width: 85vw;
+    height: 35px;
+    z-index: 9;
   }
   .search_bar {
-    width: 200px;
+    width: 100%;
     height: 100%;
-    border-radius: 20px;
-    border: 2px solid #ddd;
+    border: 1px solid #979797;
     padding-left: 14px;
+  }
+  #search_icon {
+    display: block;
   }
   nav {
     height: 35px;

@@ -57,11 +57,8 @@
       <div class="header">
         <div onclick="toggleNav()" class="menu_icon"></div>
         <a href="page2.html">
-          <h6 class="store_name">THE<br>ART<br>MUSEUM</h6>
+          <p class="store_name">THE<br>ART<br>MUSEUM</p>
         </a>
-        <div class="search">
-          <input class="search_bar" placeholder="Search" type="text">
-        </div>
         <p class="header_txt txt-orange">Become a Member</p>
       </div>
     </header>
@@ -74,6 +71,12 @@
       <a href="./member.html"><strong>BECOME A MEMBER</strong></a>
       <a href="./shop.html"><strong>SHOP</strong></a>
     </nav>
+    <div class="search_container">
+      <div id="search">
+        <input class="search_bar" placeholder="Search" type="text">
+      </div>
+      <i class="fas fa-search fa-lg" id="search_icon" onclick="toggleSearchInput()"></i>
+    </div>
   
     <div class="bg_img">
       <img src="../assets/member.png" alt="chuoi">
@@ -126,6 +129,15 @@
         document.getElementById("sidenav").style.transform = "translateX(-300px)";
         document.getElementById("content").style.transform = "translate(0, 0)";
         isClosed = true;
+      }
+    }
+
+    function toggleSearchInput() {
+      let search = document.getElementById("search");
+      if (search.style.display == "none") {
+        search.style.display = "block";
+      } else {
+        search.style.display = "none";
       }
     }
   </script>

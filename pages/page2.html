@@ -60,9 +60,6 @@
           <a href="page2.html">
             <p class="store_name">THE<br>ART<br>MUSEUM</p>
           </a>
-          <div class="search">
-            <input class="search_bar" placeholder="Search" type="text">
-          </div>
         </div>
       </header>
     
@@ -74,14 +71,20 @@
         <a href="./member.html"><strong>BECOME A MEMBER</strong></a>
         <a href="./shop.html"><strong>SHOP</strong></a>
       </nav>
+      <div class="search_container">
+        <div id="search">
+          <input class="search_bar" placeholder="Search" type="text">
+        </div>
+        <i class="fas fa-search fa-lg" id="search_icon" onclick="toggleSearchInput()"></i>
+      </div>
     
       <img class="image" src="../assets/bg_big.png" alt="picture">
     
       <div class="info_container">
-        <h6>EXHIBITION</h6>
-        <h2>MASTERS OLD AND NEW</h2>
-        <h4 class="txt-orange">APRIL 15 - SEPTEMBER 20</h4>
-        <h6>FLOOR 5</h6>
+        <p class="txt-gray top_bot">EXHIBITION</h6>
+        <p class="mid_big">MASTERS OLD AND NEW</p>
+        <p class="txt-orange mid_small">APRIL 15 - SEPTEMBER 20</p>
+        <p class="txt-gray top_bot">FLOOR 5</h6>
       </div>
     
       <div class="plan_btn_container">
@@ -115,6 +118,15 @@
         document.getElementById("sidenav").style.transform = "translateX(-300px)";
         document.getElementById("content").style.transform = "translate(0, 0)";
         isClosed = true;
+      }
+    }
+
+    function toggleSearchInput() {
+      let search = document.getElementById("search");
+      if (search.style.display == "none") {
+        search.style.display = "block";
+      } else {
+        search.style.display = "none";
       }
     }
   </script>
