@@ -207,7 +207,7 @@ nav a:hover {
   margin: 30px auto;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 920px) {
   #sidenav {
     display: none;
   }

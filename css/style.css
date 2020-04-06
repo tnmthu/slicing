@@ -61,7 +61,7 @@ button {
   background-color: #ff3d3d;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 920px) {
   h1 {
     font-size: 64px;
   }

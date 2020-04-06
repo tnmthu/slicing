@@ -181,7 +181,7 @@ nav a:hover {
   margin: 0 8px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 920px) {
   body {
     position: relative;
   }
